@@ -1,5 +1,5 @@
 # graph_conv_network
-Exploring Graph Convolutional Networks for artist based network graphs and music recommendation.
+Exploring Graph Convolutional Networks for artist-based network graphs and music recommendation.
 
 ## What's in the repo:
 
