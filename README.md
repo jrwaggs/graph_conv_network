@@ -1,6 +1,20 @@
 # graph_conv_network
 Exploring Graph Convolutional Networks for artist based network graphs and music recommendation.
 
-* /music_graph - Package containing graph-building functions and necessary music data. 
+## What's in the repo:
+
+### Data files
+* 10k_spotify_rankings.csv - Spotify stream count for the top 10k artists.
+* playlist_graph_artists_scores.csv 
+* artist-yahoo-ratings.csv - Yahoo! artist ratings data.
+* artist_dictionary.data  - Core artist dictionary.
+* filtered_tags_dict.data - User-tag dictionary filtered to the most common genres.
+* tags_dict.data - Core user-tag dictionary.
+
+### Notebooks
 * GCN.ipynb - Initial exploration of Kipf & Welling's GCN code.
-    -https://github.com/tkipf/gcn
+     - https://github.com/tkipf/gcn
+
+
+### /music_graph
+* All of the core graph-building code written for the project.  Code has been packaged to make importing the necessary functions and data cleaner, consistent, and more efficient across multiple experimenting and evaluation notebooks.
