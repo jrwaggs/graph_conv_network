@@ -12,9 +12,9 @@ Exploring Graph Convolutional Networks for artist-based network graphs and music
 * tags_dict.data - Core user-tag dictionary.
 
 ### Notebooks
-* GCN.ipynb - Initial exploration of Kipf & Welling's GCN code.
-     - https://github.com/tkipf/gcn
+* GCN.ipynb - Initial exploration of StellarGraph's implementation of GCN.
+     - https://github.com/stellargraph/stellargraph
 
 
 ### /music_graph
-* All of the core graph-building code written for the project.  Code has been packaged to make importing the necessary functions and data cleaner, consistent, and more efficient across multiple experimenting and evaluation notebooks.
+* All of the core graph-building code written for the original graphing project.  Code has been packaged to make importing the necessary functions and data cleaner, consistent, and more efficient across multiple experimenting and evaluation notebooks.
