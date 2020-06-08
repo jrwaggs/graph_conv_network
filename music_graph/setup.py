@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='music_graph',
-      version='0.1',
+      version='0.2',
       description='Packaged graph-building code',
       author='team music',
       license='MIT',

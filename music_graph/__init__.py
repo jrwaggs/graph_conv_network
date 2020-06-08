@@ -33,8 +33,12 @@ sns.set()
 artist_dictionary = pickle.load(open('artist_dictionary.data','rb'))
 tags_dictionary = pickle.load(open('tags_dict.data','rb'))
 filtered_tags_dictionary = pickle.load(open('filtered_tags_dict.data','rb'))
+
 ratings = pd.read_csv('artist-yahoo-ratings.csv')
 ratings['artist'] = ratings['artist_name'].str.lower()
+ratings = ratings.set_index('artist')
+# fill missing ratings with 0 and convert column to integer
+ratings['yahoo_rating_count'] = ratings['yahoo_rating_count'].fillna(0).astype(int)
 
 spotify_rankings = pd.read_csv('10k_spotify_rankings.csv')
 
@@ -571,7 +575,10 @@ artist_dictionary['pnb meen'] = ['pnb meen']
 artist_dictionary['lil uzi vert'] = ['lil uzi vert']
 artist_dictionary['knuckle puck'] =['Joe Taylor','Kevin Maida','John Siorek','Nick Casasanto','Ryan Rumchaks']
 artist_dictionary['the story so far'] = ['Parker Cannon','Kelen Capener','Kevin Geyer','Will Levy','Ryan Torf']
+artist_dictionary['derek and the dominos'] = ['Eric Clapton','Bobby Whitlock','Carl Radle','Jim Gordon','Dave Mason','Duane Allman']
+artist_dictionary['derek & the dominos'] = ['Eric Clapton','Bobby Whitlock','Carl Radle','Jim Gordon','Dave Mason','Duane Allman']
 
+#adding comment to diagnose git issues
 
 artist_dictionary = {str(key).lower():artist_dictionary[key] for key in artist_dictionary.keys()}
 for key in artist_dictionary.keys():
