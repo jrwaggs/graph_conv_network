@@ -464,7 +464,7 @@ def layer_graphs(artists, add_tags = True,  size = 600):
 
             artist_graph = build_net(band, size = size)  # Build the artist-based network
 
-            layered_graph.add_edges_from(artist_graph.edges())  # Add edges to layered_graph, nodes
+            layered_graph.add_edges_from(artist_graph.edges.data())  # Add edges to layered_graph, nodes
                                                                 # will be added if they do not already exist.
         else:
             print(band, ' not in artist_dictionary')
