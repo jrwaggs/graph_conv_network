@@ -132,11 +132,11 @@ def get_edges(dictionary,label, pop_weight = True, weight = 0):
                                # # check to that the edge does not already exist in edge_list
                                # if (key,key1,{label:items, 'weight':norm_rating}) not in edgelist_raw:
                                 
-                                edgelist_raw.append((key,key1,{label:items, 'weight':norm_rating}))
+                                edgelist_raw.append((key,key1,{'kind':label, 'link':items, 'weight': norm_rating}))
                             
                             # return edgelist without edge weight passed to function
                             else:
-                                edgelist_raw.append((key,key1,{label:items, 'weight':weight}))
+                                edgelist_raw.append((key,key1,{'kind':label, 'link':items, 'weight': weight}))
 
     # remove duplicate edges from edgelist_raw
     edgelist = []
